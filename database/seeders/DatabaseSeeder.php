@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
                 'name'       => 'Super Admin',
                 'email'      => 'admin@eventmaster.kz',
                 'password'   => Hash::make('Admin1234!'),
-                'role'       => 'admin', 
+                'role'       => 'admin',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
