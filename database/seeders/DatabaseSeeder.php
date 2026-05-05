@@ -10,14 +10,9 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        $roles = ['super_admin', 'admin', 'organizer', 'user'];
-        foreach ($roles as $roleName) {
-            DB::table('roles')->insertOrIgnore([
-                'name'       => $roleName,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
-        }
+        $this->call(RoleSeeder::class);
+
+        $roleId = DB::table('roles')->where('name', 'super_admin')->value('id');
 
         if (!DB::table('users')->where('email', 'admin@eventmaster.kz')->exists()) {
             $userId = DB::table('users')->insertGetId([
@@ -27,8 +22,6 @@ class DatabaseSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
-
-            $roleId = DB::table('roles')->where('name', 'super_admin')->value('id');
 
             DB::table('role_user')->insert([
                 'user_id'    => $userId,
