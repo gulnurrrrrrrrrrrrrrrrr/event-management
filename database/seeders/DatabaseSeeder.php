@@ -10,12 +10,29 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        $roles = ['super_admin', 'admin', 'organizer', 'user'];
+        foreach ($roles as $roleName) {
+            DB::table('roles')->insertOrIgnore([
+                'name'       => $roleName,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
+
         if (!DB::table('users')->where('email', 'admin@eventmaster.kz')->exists()) {
-            DB::table('users')->insert([
+            $userId = DB::table('users')->insertGetId([
                 'name'       => 'Super Admin',
                 'email'      => 'admin@eventmaster.kz',
                 'password'   => Hash::make('Admin1234!'),
-                'role'       => 'admin',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+
+            $roleId = DB::table('roles')->where('name', 'super_admin')->value('id');
+
+            DB::table('role_user')->insert([
+                'user_id'    => $userId,
+                'role_id'    => $roleId,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
