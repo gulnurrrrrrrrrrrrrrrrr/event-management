@@ -16,6 +16,5 @@ class LanguageController extends Controller
 
         Session::put('locale', $locale);
 
-        return redirect()->back()->fallback(route('home'));
-    }
+return redirect()->intended(route('home'));    }
 }
