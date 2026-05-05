@@ -1,0 +1,156 @@
+/* ====================== ЕДИНЫЙ СТИЛЬ ДЛЯ СТРАНИЦ МЕРОПРИЯТИЙ ====================== */
+
+.event-form-card {
+    max-width: 850px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.event-form-card .card-header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 28px 40px;
+    text-align: center;
+}
+
+.event-form-card .card-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Основная часть карточки */
+.event-form-card .card-body {
+    padding: 40px 50px;
+}
+
+/* Поля формы */
+.event-form-card .form-group {
+    margin-bottom: 26px;
+}
+
+.event-form-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 15.5px;
+}
+
+.event-form-card input,
+.event-form-card textarea,
+.event-form-card select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: #f8f9fa;
+}
+
+.event-form-card input:focus,
+.event-form-card textarea:focus,
+.event-form-card select:focus {
+    border-color: #3498db;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+    outline: none;
+}
+
+.event-form-card textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Кнопка */
+.event-form-card .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.event-form-card .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.25);
+}
+
+/* Ссылка назад */
+.event-form-card .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.event-form-card .back-link:hover {
+    color: #3498db;
+}
+
+/* ====================== СТИЛЬ ДЛЯ СТРАНИЦЫ ПРОСМОТРА ====================== */
+
+.event-show-card {
+    max-width: 950px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.event-show-card .card-header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.event-show-card .card-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.event-show-card .card-body {
+    padding: 45px 50px;
+}
+
+.event-image {
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+}
+
+.event-info {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 30px 0;
+    font-size: 16.5px;
+}
+
+.event-description {
+    line-height: 1.75;
+    font-size: 17px;
+    color: #444;
+    margin-top: 35px;
+}
+
+.action-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}

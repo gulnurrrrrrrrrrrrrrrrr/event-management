@@ -1,0 +1,138 @@
+.auth-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9fd 100%);
+    padding: 40px 20px;
+}
+
+.auth-container {
+    background: white;
+    width: 100%;
+    max-width: 480px;               
+    padding: 48px 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.09),
+                0 6px 24px rgba(52, 152, 219, 0.14);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(to right, #3498db, #2980b9, #1abc9c);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin: 0 0 36px;
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d1d9e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.25s ease;
+    background: #fcfdfe;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
+    background: white;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.25);
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.35);
+    background: linear-gradient(to right, #2980b9, #2471a3);
+}
+
+.switch-text {
+    text-align: center;
+    margin-top: 24px;
+    color: #7f8c8d;
+    font-size: 15px;
+}
+
+.switch-text a {
+    color: #3498db;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+/* Сообщения */
+.success,
+.error {
+    margin-top: 24px;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.success {
+    color: #27ae60;
+    background: #e8f5e9;
+    border: 1px solid #c6e2c6;
+}
+
+.error {
+    color: #c0392b;
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+}
+
+/* мобильные устройства */
+@media (max-width: 500px) {
+    .auth-container {
+        margin: 40px 16px;
+        padding: 32px 24px;
+        border-radius: 16px;
+    }
+}

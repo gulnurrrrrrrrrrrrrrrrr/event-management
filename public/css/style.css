@@ -1,0 +1,405 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h2 {
+    color: #3498db;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #3498db;
+}
+
+.register-btn {
+    background-color: #3498db;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.register-btn:hover {
+    background-color: #2980b9;
+    color: white !important;
+}
+
+/* Стили для рекламного блока */
+.advertisement-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.ad-container {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.ad-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ad-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.ad-close-btn:hover {
+    color: #e74c3c;
+}
+
+.ad-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ad-controls button {
+    padding: 8px 15px;
+    background-color: white;
+    color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.ad-controls button:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для секции мероприятий */
+.events-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.events-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 32px;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.event-card {
+    flex: 0 1 300px; 
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-card h3 {
+    padding: 15px 15px 5px;
+    color: #2c3e50;
+}
+
+.event-card p {
+    padding: 0 15px 5px;
+    color: #666;
+}
+
+.details-btn {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 15px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #2980b9;
+}
+
+/* футер */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.jquery-demo-panel {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+}
+
+.jquery-demo-panel h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.method-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    min-width: 120px;
+}
+
+.method-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.method-btn:active {
+    transform: scale(0.95);
+}
+
+.ad-status {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e8f4f8;
+    border-radius: 5px;
+    text-align: center;
+    color: #2c3e50;
+    font-weight: bold;
+}
+#registerMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+/* ====================== СТИЛИ ДЛЯ СТРАНИЦ МЕРОПРИЯТИЙ ====================== */
+
+/* Общий контейнер для форм */
+.form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #FF750F;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Поля формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #FF750F;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 117, 15, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Кнопки */
+.auth-btn, .btn-create, .btn-edit, .btn-delete, .btn-back {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.auth-btn, .btn-create {
+    background: #FF750F;
+    color: white;
+}
+
+.btn-create:hover {
+    background: #e66a0d;
+    transform: translateY(-2px);
+}
+
+.btn-edit {
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn-edit:hover {
+    background: #2563eb;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #dc2626;
+}
+
+.btn-back {
+    background: #6b7280;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background: #4b5563;
+}
+
+/* Страница просмотра мероприятия (show) */
+.event-detail-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.event-detail {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.event-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.event-info {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+    font-size: 17px;
+}
+
+.event-info p {
+    margin: 10px 0;
+}
+
+.event-description {
+    line-height: 1.7;
+    font-size: 17px;
+    color: #444;
+    margin-top: 30px;
+}
+
+.action-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,392 @@
+
+/* ── BASE: Images always responsive ── */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    gap: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    gap: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    align-items: center;
+}
+
+/* ── EVENT CARDS ── */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.event-card {
+    flex: 1 1 280px;
+    max-width: 360px;
+    width: 100%;
+}
+
+.event-card img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ── FORMS ── */
+.form-container,
+.event-form-card,
+.event-show-card,
+.auth-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ── AUTH CARD (login / register) ── */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #f1f5f9;
+}
+
+.auth-card {
+    width: 90%;
+    max-width: 480px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* ── ADMIN TABLE ── */
+.table-wrapper,
+.admin-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    min-width: 600px;
+}
+
+/* ── CHART GRID ── */
+.chart-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chart-card {
+    flex: 1 1 280px;
+    min-width: 0;
+}
+
+/* ── STAT CARDS ── */
+.stat-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.stat-card {
+    flex: 1 1 150px;
+}
+
+/* ── SECTIONS ── */
+.events-section,
+.advertisement-section,
+.jquery-demo-panel {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── GALLERY ── */
+.gallery-thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.gallery-thumb {
+    width: 70px;
+    height: 55px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+/* ── LAPTOP / DESKTOP (> 1024px) — full layout, no changes ── */
+@media (min-width: 1024px) {
+    .navbar, nav {
+        padding: 0 40px;
+    }
+    .events-container {
+        padding: 0 40px;
+    }
+    .event-card {
+        flex: 0 1 300px;
+    }
+}
+
+/* ── TABLET (768px – 1023px) ── */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .navbar, nav {
+        padding: 0 24px;
+        gap: 12px;
+    }
+
+    .nav-menu, nav ul {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .event-card {
+        flex: 1 1 calc(50% - 24px);
+        max-width: calc(50% - 12px);
+    }
+
+    .auth-card {
+        max-width: 440px;
+    }
+
+    .form-container,
+    .event-form-card,
+    .event-show-card {
+        width: 95%;
+        padding: 24px;
+    }
+
+    .chart-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .stat-card {
+        flex: 1 1 calc(33% - 16px);
+    }
+
+    /* Admin main */
+    main {
+        padding: 20px 24px;
+    }
+    section {
+        width: 100%;
+    }
+}
+
+/* ── PHONE (< 768px) ── */
+@media (max-width: 767px) {
+
+    /* Hamburger-style nav: stack vertically */
+    .navbar, nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+        gap: 8px;
+    }
+
+    .nav-menu, nav ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-menu li, nav ul li {
+        font-size: 13px;
+    }
+
+    /* Logo smaller */
+    .logo h2, nav h2 {
+        font-size: 18px;
+    }
+
+    /* Cards full width */
+    .event-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .events-container {
+        padding: 0 12px;
+        gap: 16px;
+    }
+
+    /* Auth card full width */
+    .auth-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+    }
+
+    .auth-wrapper {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    /* Forms */
+    .form-container,
+    .event-form-card,
+    .event-show-card,
+    .auth-container {
+        width: 100%;
+        padding: 16px;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    /* Action buttons stack */
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .action-buttons a,
+    .action-buttons button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Admin tables scroll */
+    .admin-table {
+        font-size: 13px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 8px 10px;
+    }
+
+    /* Charts stack */
+    .chart-card {
+        flex: 1 1 100%;
+    }
+
+    .stat-card {
+        flex: 1 1 calc(50% - 8px);
+    }
+
+    /* Admin main */
+    main {
+        padding: 12px 16px;
+    }
+    section {
+        width: 100%;
+        padding: 16px;
+    }
+
+    /* Gallery thumbs smaller */
+    .gallery-thumb {
+        width: 55px;
+        height: 45px;
+    }
+
+    /* Event info block */
+    .event-info {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    /* Language switcher compact */
+    .language-switcher a,
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    /* Stat badges wrap */
+    .stat-badges {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Headings */
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.2rem; }
+
+    /* Tables in admin users page */
+    .assign-role-form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .role-select {
+        width: 100%;
+    }
+}
+
+/* ── SMALL PHONE (< 480px) ── */
+@media (max-width: 480px) {
+    .stat-card {
+        flex: 1 1 100%;
+    }
+
+    .nav-menu, nav ul {
+        gap: 6px;
+    }
+
+    .nav-menu li a, nav ul li a {
+        font-size: 12px;
+    }
+
+    .event-card img {
+        height: 160px;
+    }
+
+    .admin-table {
+        font-size: 12px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+}
