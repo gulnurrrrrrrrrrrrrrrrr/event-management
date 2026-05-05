@@ -20,4 +20,4 @@ RUN mkdir -p /var/www/html/database \
 
 EXPOSE 8000
 
-CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
+CMD php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=8000
