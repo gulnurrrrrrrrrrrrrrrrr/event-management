@@ -13,7 +13,10 @@ Route::get('/lang/{locale}', [LanguageController::class, 'switch'])
      ->where('locale', 'ru|en|kk');
 
 Route::middleware(['web', \App\Http\Middleware\SetLocale::class])->group(function () {
-
+Route::middleware(['web'])->get('/lang/{locale}', [LanguageController::class, 'switch'])
+     ->name('lang.switch')
+     ->where('locale', 'ru|en|kk');
+    
     Route::get('/', [EventController::class, 'index'])->name('home');
     Route::get('/events', [EventController::class, 'index'])->name('events.index');
 
